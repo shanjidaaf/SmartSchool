@@ -3,47 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Smart School</title>
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumar+One+Outline&family=Notable&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <body>
-    <section id="header">
-        <header>
-            <div id="name">
-                <h1>Smart School</h1>
-            </div>
-            <marquee>🎓 Welcome to Smart School  – A Modern, Digital school Management Platform!📚 </marquee>
-        </header>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Smart School</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button class="btn btn-primary"><a href="./registration/reg.html" class="login-link">Login / Sign Up</a></button>
+        </nav>
+        <!-- <div class="sliding-text">
+            <marquee class="notable-regular">🎓 Welcome to Smart School  – A Modern, Digital school Management Platform!🎓 </marquee>
+            </div> -->
+    </header>
+
+    
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+           <div class="sliding-text">
+           <marquee class="notable-regular">🎓 Welcome to Smart School  – A Modern, Digital school Management Platform!🎓 </marquee>
+           </div>
+        
+        &nbsp;
+        
+        <h1>Learn Without Limits</h1>
+        <p>Start, switch, or advance your education with more than 500 courses & Certificates from the best Teachers of bangladesh!</p>
+        <button class="btn btn-primary">Browse Courses</button>
     </section>
+
+    <!-- Courses Section -->
+    <section class="courses">
+        <div class="section-title">
+            <h2>Popular Courses</h2>
+            <p>Choose from 1000+ online video courses with new additions published every month</p>
+        </div>
+        <div class="course-grid">
+            <!-- Course Card 1 -->
+          
+            <div class="course-card">
+                <div class="course-img">
+                    <img src="./source/EthicsReligion.png" alt="Ethics & Religion">
+                </div>
+                <div class="course-content">
+                <a>
+                   
+                    <h3>Ethics & Religion Learning</h3>
+                </a>
+                    <p>Not Only a Good Student, Be a Good Human Being </p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-user"></i> Labiba Alam</span>
+                        <span><i class="fas fa-star"></i> 4.8 (120)</span>
+                    </div>
+                </div>
+            </div>
+       
             
-                <nav>
-                    <div class="navbar">
-                        <a href="#home">Home</a>
-                        <a href="#contact">Contact</a>
-                     
-                        <a href="#about">About</a>
-
-                        <!-- bootstrap -->
-
-                        <select class="class-select">
-                            <option selected disabled>Class</option>
-                            <option>Class 6</option>
-                            <option>Class 7</option>
-                            <option>Class 8</option>
-                            <option>Class 9</option>
-                            <option>Class 10</option>
-                            <option>Moral</option>
-                            
-                          </select>
-                        <a href="#login">Login</a>
-                        <a href="#signup">SignUp</a>
+            <!-- Course Card 2 -->
+            <div class="course-card">
+                <div class="course-img">
+                    <img src="./source/HighSchool.png" alt="High School Education">
+                </div>
+                <div class="course-content">
+                    <h3>High School Education</h3>
+                    <p>Master in All Subjects in Just 1 Click!</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-user"></i> Shanjida Afrin</span>
+                        <span><i class="fas fa-star"></i> 4.9 (95)</span>
                     </div>
-                </nav>
-                <section class="menu">
-                    <div>
-                        
+                </div>
+            </div>
+            
+            <!-- Course Card 3 -->
+            <div class="course-card">
+                <div class="course-img">
+                    <img src="./source/Screenshot 2025-04-24 031458.png" alt="Top Digital Skills">
+                </div>
+                <div class="course-content">
+                    <h3>Top Digital Skills Courses</h3>
+                    <p>Focus On Your Goal! Start Exploring Today! </p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-user"></i> Ishfar Haque</span>
+                        <span><i class="fas fa-star"></i> 4.7 (85)</span>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                </section>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="section-title">
+            <h2>Why Choose Us</h2>
+            <p>We provide the best learning experience with our innovative approach</p>
+        </div>
+        <div class="feature-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Expert Teachers</h3>
+                <p>Learn from industry experts who are passionate about teaching</p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>Certification</h3>
+                <p>Get certified upon completion of your courses</p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Lifetime Access</h3>
+                <p>Get lifetime access to all the courses you purchase</p>
+            </div>
+            
+            <!-- Feature 4 -->
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>24/7 Support</h3>
+                <p>Our support team is available round the clock</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <!-- Column 1 -->
+            <div class="footer-col">
+                <h3>Smart School</h3>
+                <p>Empowering learners to achieve their goals through quality education.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Courses</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </div>
+            
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h3>Categories</h3>
+                <a href="#">Skill Development</a>
+                <a href="#">High School Education</a>
+                <a href="#">Moral & Ethics</a>
+                <a href="#">Religion</a>
+                <!-- <a href="#">Marketing</a> -->
+            </div>
+            
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> BUP, Mirpur-12, Dhaka, Bangladesh</p>
+                <p><i class="fas fa-phone"></i> +880-1234567890</p>
+                <p><i class="fas fa-envelope"></i> smartschool@gmail.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Smart School. All Rights Reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

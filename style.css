@@ -75,6 +75,14 @@ header {
     background-color: #2a4fd8;
 }
 
+.login-link{
+    text-decoration: none;
+    color: white;
+}
+
+.login-link:visited{
+    color: white;
+}
 
 @keyframes slideBackground{
  0%{
