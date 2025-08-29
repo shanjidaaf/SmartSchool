@@ -58,6 +58,47 @@ header {
     color: var(--primary-color);
 }
 
+/* Dropdown Styles */
+.navbar .dropdown {
+    position: relative;
+}
+
+.navbar .dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar .dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar .dropdown-menu li a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown on hover */
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 .btn {
     padding: 10px 20px;
     border-radius: 5px;
@@ -216,7 +257,7 @@ header {
 
 /* Footer Styles */
 footer {
-    background-color: var(--dark-color);
+    background: linear-gradient(rgb(9, 39, 136), rgba(3, 15, 147, 0.902));
     color: white;
     padding: 60px 5% 30px;
 }
@@ -234,7 +275,7 @@ footer {
 }
 
 .footer-col p, .footer-col a {
-    color: #bbb;
+    color: #edebeb;
     margin-bottom: 10px;
     display: block;
     text-decoration: none;
@@ -316,6 +357,20 @@ footer {
         order: -1;
         margin-bottom: 30px;
     }
+}
+.auth-buttons a,
+.auth-buttons .btn,
+.btn a,
+.login-link,
+.login-link:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.auth-buttons a:hover,
+.login-link:hover {
+  text-decoration: none;
+  color: white;
 }
 
 

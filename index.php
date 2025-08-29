@@ -1,6 +1,18 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+include 'nav.php'; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart School</title>
@@ -12,33 +24,6 @@
 </head>
 
 <body>
-  <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Smart School</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a href="#">Classes <i class="fas fa-caret-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="class6.html">Class 6</a></li>
-            <li><a href="class7.html">Class 7</a></li>
-            <li><a href="class8.html">Class 8</a></li>
-            <li><a href="class9.html">Class 9</a></li>
-            <li><a href="class10.html">Class 10</a></li>
-          </ul>
-        </li>
-        <li><a href="feedback.html">Feedback</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="auth-buttons">
-        <a href="login.html" class="btn btn-primary">Login</a>
-        <a href="reg.html" class="btn btn-primary">Sign Up</a>
-      </div>
-    </nav>
-  </header>
-
   <!-- Hero Section -->
   <section class="hero">
     <div class="sliding-text">
@@ -152,53 +137,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-grid">
-      <!-- Column 1 -->
-      <div class="footer-col">
-        <h3>Smart School</h3>
-        <p>Empowering learners to achieve their goals through quality education.</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-
-      <!-- Column 2 -->
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="class6.html">Classes</a>
-        <a href="#">Blog</a>
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <!-- Column 3 -->
-      <div class="footer-col">
-        <h3>Categories</h3>
-        <a href="#">Skill Development</a>
-        <a href="#">High School Education</a>
-        <a href="#">Moral & Ethics</a>
-        <a href="#">Religion</a>
-      </div>
-
-      <!-- Column 4 -->
-      <div class="footer-col">
-        <h3>Contact Us</h3>
-        <p><i class="fas fa-map-marker-alt"></i> BUP, Mirpur-12, Dhaka, Bangladesh</p>
-        <p><i class="fas fa-phone"></i> +880-1234567890</p>
-        <p><i class="fas fa-envelope"></i> smartschool@gmail.com</p>
-      </div>
-    </div>
-    <div class="copyright">
-      <p>&copy; 2023 Smart School. All Rights Reserved.</p>
-    </div>
-  </footer>
   <!-- Ethics Modal -->
 <div id="ethicsModal" class="modal" style="display:none;">
   <div class="modal-content">
@@ -233,6 +171,9 @@
     if (event.target === digital) digital.style.display = "none";
   };
 </script>
-
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<?php include 'footer.php'; ?>
 </body>
 </html>
+

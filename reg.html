@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f7f8f8, #a6d2ec);
+    } 
+/* Navbar Styles */
+    .custom-navbar {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 20px 5%;
+    }
+
+    .logo {
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+
+    .nav-links li {
+      margin-left: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark-color);
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .auth-buttons a {
+      margin-left: 10px;
+    }
+.navbar-brand {
+      color: #007bff !important;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin: 15px 0 5px;
+    }
+    
+    /* Dropdown */
+    .navbar .dropdown {
+      position: relative;
+    }
+
+    .navbar .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 150px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+      z-index: 1000;
+      top: 100%;
+      left: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .navbar .dropdown-menu li a {
+      display: block;
+      padding: 10px 15px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .navbar .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+    .mobile-input-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .mobile-input-group input[disabled] {
+      background-color: #f0f0f0;
+      color: #333;
+      font-weight: bold;
+      width: 80px;
+      text-align: center;
+    }
+    header {
+    background-color:#2a4fd8;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+    .eye-icon {
+      cursor: pointer;
+      color: #6c757d;
+    }
+    .text-danger {
+      color: red;
+    }
+    .text-success {
+      color: green;
+    }
+    #form-container {
+      background-color: white;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    .carousel img {
+      height: 400px;
+      object-fit: contain;
+    }
+
+    #register-button:hover {
+    background-color: rgb(56, 136, 255);
+}
+
+#login-button {
+    background-color:  rgb(148, 150, 156);
+}
+
+#login-button:hover {
+    background-color: rgb(56, 136, 255);
+}
+
+.login-link{
+    text-decoration: none;
+    color: white;
+}
+
+.login-link:visited{
+    color: white;
+}
+
+      /* Footer */
+footer {
+  background: linear-gradient(rgb(9, 39, 136), rgba(3, 15, 147, 0.902));
+    color: white;
+    padding: 60px 5% 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-col p, .footer-col a {
+  color: #edebeb;
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 18px;
+}
+
+.social-links a:hover{
+    transform: translateY(-10px);
+
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #444;
+    color: #bbb;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar fixed-top custom-navbar d-flex justify-content-between align-items-center" style="background-color: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 20px 5%;">
+  <div class="logo" style="font-size: 34px; font-weight: 700; color: #007bff;">Smart School</div>
+  <ul class="nav-links d-flex list-unstyled mb-0">
+    <li><a href="./index.html" class="text-decoration-none px-3 text-dark">Home</a></li>
+    <li class="dropdown">
+      <a href="#" class="text-decoration-none px-3 text-dark">Classes <i class="fas fa-caret-down"></i></a>
+      <ul class="dropdown-menu">
+        <li><a href="./class6.html">Class 6</a></li>
+        <li><a href="./class7.html">Class 7</a></li>
+        <li><a href="./class8.html">Class 8</a></li>
+        <li><a href="./class9.html">Class 9</a></li>
+        <li><a href="./class10.html">Class 10</a></li>
+      </ul>
+    </li>
+    <li><a href="./feedback.html" class="text-decoration-none px-3 text-dark">Feedback</a></li>
+    <li><a href="./about.html" class="text-decoration-none px-3 text-dark">About</a></li>
+    <li><a href="./contact.html" class="text-decoration-none px-3 text-dark">Contact</a></li>
+  </ul>
+  <div class="auth-buttons">
+    <a href="login.html" class="btn btn-primary">Login</a>
+    <a href="reg.html" class="btn btn-primary">Sign Up</a>
+  </div>
+</nav>
+<div style="height: 120px;"></div>
+
+<!-- Two Column Layout -->
+<div class="container">
+  <div class="row align-items-start">
+    
+    <!-- Carousel Column -->
+    <div class="col-md-6" style="margin-top: 80px;">
+      <div id="carouselImages" class="carousel slide shadow rounded" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="source/fact1.png" class="d-block w-100" alt="Slide 1">
+          </div>
+          <div class="carousel-item">
+            <img src="source/fact2.png" class="d-block w-100" alt="Slide 2">
+          </div>
+          <div class="carousel-item">
+            <img src="source/fact3.png" class="d-block w-100" alt="Slide 3">
+          </div>
+          <div class="carousel-item">
+            <img src="source/fact4.png" class="d-block w-100" alt="Slide 4">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselImages" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselImages" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Form Column -->
+    <div class="col-md-6" style="margin-top: -20px;">
+      <h2 class="text-center mb-4" style="font-weight: 600;">Register Now!</h2>
+      <div id="form-container" style="max-width: 600px; margin: auto;">
+      <form id="registration-form" method="POST" action="reg.php">
+
+  <label for="first-name">First Name</label>
+  <input type="text" name="first_name" id="first-name" placeholder="e.g. Labiba" required>
+
+  <label for="last-name">Last Name</label>
+  <input type="text" name="last_name" id="last-name" placeholder="e.g. Alam" required>
+
+  <label for="mobile-number">Mobile Number</label>
+  <div class="mobile-input-group">
+    <input type="text" id="country-code" value="+880" disabled>
+    <input type="tel" name="mobile" id="mobile-number" placeholder="Must be 10 Digits" required>
+  </div>
+  <div id="mobile-alert" class="text-danger small"></div>
+
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" placeholder="e.g. labiba@gmail.com" required>
+  <div id="email-alert" class="text-danger small"></div>
+
+  <label for="password">Password</label>
+  <div class="input-group mb-3">
+    <input type="password" name="password" id="password" class="form-control" placeholder="Minimum 8 characters" required>
+    <span class="input-group-text"><i class="fas fa-eye eye-icon" id="toggle-password"></i></span>
+  </div>
+  <div id="password-length-alert" class="text-danger small"></div>
+
+  <label for="confirm-password">Re-enter Password</label>
+  <div class="input-group mb-3">
+   <input type="password" name="confirm_password" id="confirm-password" class="form-control" placeholder="Must match password" required>
+
+    <span class="input-group-text"><i class="fas fa-eye eye-icon" id="toggle-confirm-password"></i></span>
+  </div>
+  <div id="password-alert" class="small"></div>
+
+  <label for="address">Address</label>
+  <textarea name="address" id="address" required></textarea>
+
+  <button type="submit" class="btn btn-primary mt-3 w-100">Register</button>
+  <div class="text-center mt-3">
+    <span>Already registered? </span>
+    <a href="login.html" class="text-decoration-none text-primary fw-semibold">Login Here</a>
+  </div>
+</form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Scripts -->
+<script>
+  const form = document.getElementById("registration-form");
+  const mobileInput = document.getElementById("mobile-number");
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
+  const confirmPasswordInput = document.getElementById("confirm-password");
+
+  const mobileAlert = document.getElementById("mobile-alert");
+  const emailAlert = document.getElementById("email-alert");
+  const passwordAlert = document.getElementById("password-alert");
+  const passwordLengthAlert = document.getElementById("password-length-alert");
+
+  function validateMobile() {
+    if (mobileInput.value.length !== 10 || isNaN(mobileInput.value)) {
+      mobileAlert.textContent = "Mobile number must be exactly 10 digits.";
+    } else {
+      mobileAlert.textContent = "";
+    }
+  }
+
+  function validateEmail() {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(emailInput.value)) {
+      emailAlert.textContent = "Please enter a valid email address (e.g. example@example.com).";
+    } else {
+      emailAlert.textContent = "";
+    }
+  }
+
+  function validatePasswordStrength() {
+    const password = passwordInput.value;
+    const strongPasswordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+    if (!strongPasswordPattern.test(password)) {
+      passwordLengthAlert.textContent =
+        "❌ Password must be at least 8 characters long, with uppercase, lowercase, number, and special character.";
+    } else {
+      passwordLengthAlert.textContent = "";
+    }
+  }
+
+  function validatePasswordMatch() {
+    if (confirmPasswordInput.value !== passwordInput.value) {
+      passwordAlert.textContent = "Passwords do not match.";
+      passwordAlert.classList.add("text-danger");
+      passwordAlert.classList.remove("text-success");
+    } else {
+      passwordAlert.textContent = "Passwords match.";
+      passwordAlert.classList.add("text-success");
+      passwordAlert.classList.remove("text-danger");
+    }
+  }
+
+  mobileInput.addEventListener("input", validateMobile);
+  emailInput.addEventListener("input", validateEmail);
+  passwordInput.addEventListener("input", () => {
+    validatePasswordStrength();
+    validatePasswordMatch();
+  });
+  confirmPasswordInput.addEventListener("input", validatePasswordMatch);
+
+  form.addEventListener("submit", function (e) {
+    validateMobile();
+    validateEmail();
+    validatePasswordStrength();
+    validatePasswordMatch();
+
+    if (
+      mobileAlert.textContent ||
+      emailAlert.textContent ||
+      passwordLengthAlert.textContent ||
+      passwordAlert.classList.contains("text-danger")
+    ) {
+      e.preventDefault();
+    }
+  });
+
+  document.getElementById("toggle-password").addEventListener("click", function () {
+    const type = passwordInput.type === "password" ? "text" : "password";
+    passwordInput.type = type;
+    this.classList.toggle("fa-eye-slash");
+  });
+
+  document.getElementById("toggle-confirm-password").addEventListener("click", function () {
+    const type = confirmPasswordInput.type === "password" ? "text" : "password";
+    confirmPasswordInput.type = type;
+    this.classList.toggle("fa-eye-slash");
+  });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Footer -->
+<footer>
+  <div class="footer-grid">
+      <!-- Column 1 -->
+      <div class="footer-col">
+          <h3>Smart School</h3>
+          <p>Empowering learners to achieve their goals through quality education.</p>
+          <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+      </div>
+      
+      <!-- Column 2 -->
+      <div class="footer-col">
+          <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="class6.html">Classes</a>
+        <a href="#">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      
+      <!-- Column 3 -->
+      <div class="footer-col">
+          <h3>Categories</h3>
+          <a href="#">Skill Development</a>
+          <a href="#">High School Education</a>
+          <a href="#">Moral & Ethics</a>
+          <a href="#">Religion</a>
+          <!-- <a href="#">Marketing</a> -->
+      </div>
+      
+      <!-- Column 4 -->
+      <div class="footer-col">
+          <h3>Contact Us</h3>
+          <p><i class="fas fa-map-marker-alt"></i> BUP, Mirpur-12, Dhaka, Bangladesh</p>
+          <p><i class="fas fa-phone"></i> +880-1234567890</p>
+          <p><i class="fas fa-envelope"></i> smartschool@gmail.com</p>
+      </div>
+  </div>
+  <div class="copyright">
+      <p>&copy; 2023 Smart School. All Rights Reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
