@@ -19,7 +19,7 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL,
     address VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+); <br>
 
 -- Feedback Table
 CREATE TABLE feedback (
@@ -27,7 +27,7 @@ CREATE TABLE feedback (
     rating INT NOT NULL,
     comment TEXT,
     submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+); <br>
 
 -- Quiz Results Table
 CREATE TABLE quiz_results (
@@ -39,7 +39,7 @@ CREATE TABLE quiz_results (
     percentage DECIMAL(5,2) NOT NULL,
     submitted_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
-);
+); <br>
 
 -- Contact Messages Table
 CREATE TABLE contact_messages (
@@ -57,11 +57,11 @@ In your browser, go to: http://localhost/SmartSchool/index.html  and it will red
 features. HTML files of all pages are also attached so that they can be visited particularly too.
 
 🎯 Features:
--Browse books, videos, and resources easily (free access without login).
--User registration & login system (with secure password hashing).
--Store and view exam results online.
--Save contact and feedback info in the database.
--Fully responsive design with smooth scrolling.
+-Browse books, videos, and resources easily (free access without login). <br>
+-User registration & login system (with secure password hashing). <br>
+-Store and view exam results online. <br>
+-Save contact and feedback info in the database. <br>
+-Fully responsive design with smooth scrolling. <br>
 
 🔒 Security:
 Passwords are hashed before being stored in the database, ensuring even the site owner cannot view them.
