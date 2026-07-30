@@ -1,5 +1,5 @@
 🎓 A responsive educational web platform for Bangladeshi students (Class 6–10), featuring NCTB books, topic-wise videos, online exams, and result viewing. Built using HTML, CSS, JavaScript, Bootstrap, and PHP with XAMPP.
-## 🚀 How to Run the Project
+## How to Run the Project
 
 1. **Start XAMPP**  
    - Open XAMPP and start **Apache** and **MySQL**, press "admin" beside MySQL.
